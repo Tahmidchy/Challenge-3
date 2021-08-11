@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800;900&display=swap');
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #0c122c;
+    color: #dddbff;
+    font-weight: 400;
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+@media(max-width:56.25em) {
+    body {
+        background-position: center;
+    }
+}
+
+@media(max-width:23.43em) {
+    body {
+        background-image: url(../images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.container {
+    display: grid;
+    margin: 30rem 2525rem;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 5rem;
+    justify-content: center;
+}
+
+.header {
+    background-color: #1d2c67;
+    padding: 4rem 10rem 4rem 4rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+    border-radius: 5px 100px 5px 5px;
+}
+
+.header_tab {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.header_tab_icon {
+    background-color: #0c122c;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.storage {
+    background-color: #1d2c67;
+    border-radius: 5px;
+    align-self: end;
+    color: #dddbff;
+    padding: 2rem 4rem;
+    font-weight: 400;
+    position: relative;
+    font-size: 1.4rem;
+}
+
+.storage__left {
+    padding: 1.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: -4rem;
+    right: 4rem;
+    border-radius: 10px 10px 0 10px;
+    text-align: center;
+}
+
+.storage__left .name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    color: #1d2c67;
+}
+
+.storage__left .left {
+    color: #848794;
+    font-size: 1.4rem;
+}
+
+.storage__left::after,
+.storage__left::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    border-top: 20px solid white;
+    border-left: 25px solid transparent;
+}
+
+.storage__para {
+    padding: 2rem;
+    padding-left: 0;
+}
+
+.storage__bar {
+    height: 1.7rem;
+    margin-bottom: 1rem;
+    position: relative;
+    background-color: #0c122c;
+    border-radius: 15px;
+}
+
+.storage__bar__line {
+    background-image: linear-gradient(to right, #ffa399, #ff4d97);
+    border-radius: 15px;
+    height: 1.6rem;
+    width: 75%;
+    border: 2px solid #0c122c;
+}
+
+.storage__bar__circle {
+    position: absolute;
+    height: .9rem;
+    width: .9rem;
+    border-radius: 50%;
+    background-color: white;
+    top: 3px;
+    left: 72.5%;
+}
+
+.storage__value {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 75em) {
+    .container {
+        margin: 30rem 15rem;
+    }
+}
+
+@media (max-width: 65em) {
+    .container {
+        margin: 30rem 10rem;
+    }
+}
+
+@media (max-width: 56.25em) {
+    .container {
+        margin: 30rem 5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 50em) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1rem;
+        margin: 20rem;
+    }
+    .storage__left {
+        display: flex;
+        border-radius: 10px;
+        top: 80%;
+        right: 30%;
+        padding: 2rem;
+    }
+    .storage__left::before,
+    .storage__left::after {
+        display: none;
+    }
+}
+
+@media (max-width: 23.43em) {
+    .container {
+        grid-gap: 5px;
+    }
+}
